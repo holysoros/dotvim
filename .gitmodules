@@ -1,0 +1,36 @@
+[submodule "bundle/fugitive"]
+	path = bundle/fugitive
+	url = http://github.com/tpope/vim-fugitive.git
+[submodule "bundle/a"]
+	path = bundle/a
+	url = https://github.com/vim-scripts/a.vim.git
+[submodule "bundle/NERD_Commenter"]
+	path = bundle/NERD_Commenter
+	url = https://github.com/vim-scripts/The-NERD-Commenter.git
+[submodule "bundle/NERD_Tree"]
+	path = bundle/NERD_Tree
+	url = https://github.com/vim-scripts/The-NERD-tree.git
+[submodule "bundle/OmniCppComplete"]
+	path = bundle/OmniCppComplete
+	url = https://github.com/vim-scripts/OmniCppComplete.git
+[submodule "bundle/genutils"]
+	path = bundle/genutils
+	url = https://github.com/vim-scripts/genutils.git
+[submodule "bundle/lookupfile"]
+	path = bundle/lookupfile
+	url = https://github.com/vim-scripts/lookupfile.git
+[submodule "bundle/DrawIt"]
+	path = bundle/DrawIt
+	url = https://github.com/vim-scripts/DrawIt.git
+[submodule "bundle/pathogen"]
+	path = bundle/pathogen
+	url = https://github.com/tpope/vim-pathogen.git
+[submodule "bundle/taglist"]
+	path = bundle/taglist
+	url = https://github.com/vim-scripts/taglist.vim.git
+[submodule "bundle/snipmate"]
+	path = bundle/snipmate
+	url = https://github.com/msanders/snipmate.vim.git
+[submodule "bundle/vim-markdown"]
+	path = bundle/vim-markdown
+	url = https://github.com/hallison/vim-markdown.git
