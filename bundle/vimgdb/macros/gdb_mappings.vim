@@ -26,16 +26,27 @@ function! SToggleGDB()
     set statusline+=%F%m%r%h%w\ [POS=%04l,%04v]\ [%p%%]\ [LEN=%L]\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [ASCII=\%03.3b]\ [HEX=\%02.2B]
     :call <SID>Toggle()
 endfunction
-nmap <F7>  :call ToggleGDB()<cr>
-nmap <S-F7>  :call <SID>Toggle()<cr>
+nmap <F10>  :call ToggleGDB()<cr>
+nmap <S-F10>  :call <SID>Toggle()<cr>
 
-" nmap <S-F7>  :call SToggleGDB()<cr>
-" nmap <F7>  :call <SID>Toggle()<CR>
+" nmap <S-F10>  :call SToggleGDB()<cr>
+" nmap <F10>  :call <SID>Toggle()<CR>
 
 " Toggle between vim default and custom mappings
 function! s:Toggle()
     if s:gdb_k
 	let s:gdb_k = 0
+
+    " easwy add
+    if ! exists("g:vimgdb_debug_file")
+        let g:vimgdb_debug_file = ""
+    elseif g:vimgdb_debug_file == ""
+        call inputsave()
+        let g:vimgdb_debug_file = input("File: ", "", "file")
+        call inputrestore()
+    endif
+    call gdb("file " . g:vimgdb_debug_file)
+
 	map <Space> :call gdb("")<CR>
 	nmap <silent> <C-Z> :call gdb("\032")<CR>
 
@@ -74,6 +85,10 @@ function! s:Toggle()
     " Restore vim defaults
     else
 	let s:gdb_k = 1
+
+    " easwy add
+    call gdb("quit")
+
 	nunmap <Space>
 	nunmap <C-Z>
 
@@ -122,5 +137,3 @@ endfunction
 
 " map vimGdb keys
 "call s:Toggle()
-
-

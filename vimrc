@@ -32,10 +32,11 @@ if has("vms")
 else
   set backup		" keep a backup file
 endif
-set history=50		" keep 50 lines of command line history
+set history=50	" keep 50 lines of command line history
 set ruler		" show the cursor position all the time
 set showcmd		" display incomplete commands
-"set incsearch		" do incremental searching
+set incsearch		" do incremental searching
+set ignorecase
 
 " For Win32 GUI: remove 't' flag from 'guioptions': no tearoff menu entries
 " let &guioptions = substitute(&guioptions, "t", "", "g")
@@ -314,3 +315,13 @@ nmap <C-@>d :cs find d <C-R>=expand("<cword>")<CR><CR>
 
 " Want to use :Man in vim
 so $VIMRUNTIME/ftplugin/man.vim
+nmap M :Man <C-R>=expand("<cword>")<CR><CR>
+
+""""""""""""""""""""""""""""""
+" vimgdb setting
+""""""""""""""""""""""""""""""
+let g:vimgdb_debug_file = ""
+run macros/gdb_mappings.vim 
+
+" auto-detect markdown file type
+au BufNewFile,BufRead *.md set filetype=markdown
