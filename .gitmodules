@@ -53,3 +53,8 @@
 [submodule "bundle/repeat"]
 	path = bundle/repeat
 	url = https://github.com/tpope/vim-repeat.git
+    ignore = dirty
+[submodule "bundle/align"]
+	path = bundle/align
+	url = https://github.com/tsaleh/vim-align.git
+    ignore = dirty
