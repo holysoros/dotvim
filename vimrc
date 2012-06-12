@@ -153,7 +153,7 @@ map <silent> <C-F2> :if &guioptions =~# 'T' <Bar>
 \set guioptions+=m <Bar>
 
 " configure for taglist plugin
-map <F3> :silent! Tlist<CR>
+"map <F3> :silent! Tlist<CR>
 let Tlist_Ctags_Cmd = 'ctags'
 let Tlist_Use_Right_Window = 1
 let Tlist_Show_One_File=1 "让taglist可以同时展示多个文件的函数列表，如果想只有1个，设置为1
@@ -242,7 +242,7 @@ let g:DoxygenToolkit_maxFunctionProtoLines = 30
 
 " configure for omnicppcomplete
 set nocp
-map <C-F12> :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<CR>
+"map <C-F12> :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<CR>
 set completeopt=menu
 "let OmniCpp_GlobalScopeSearch = 0
 " search namespaces in the current buffer and in included files
@@ -254,14 +254,15 @@ let NERDShutUp=1
 
 " configure for tempate
 let g:template_load=1
-let g:template_confirm = 0
+let g:template_confirm=0
+let g:template_tags_replacing=1
 " set template files path, save time to search
-let g:template_path="/home/soros/.vim/templates"
+let g:template_path="/home/soros/.vim/bundle/template_loader/templates"
 " set pre-defined tags
 let g:T_AUTHOR = "LiJunjie"
 let g:T_AUTHOR_EMAIL="holysoros@gmail.com"
 let g:T_AUTHOR = "LiJunjie"
-let g:T_AUTHOR_EMAIL="holysoros@gmail.com"
+let g:T_AUTHOR_WEBSITE="sharevery.net"
 let g:T_DATE_FORMAT="%y-%m-%d %H:%M:%S"
 
 " configure for c.vim
@@ -323,5 +324,20 @@ nmap M :Man <C-R>=expand("<cword>")<CR><CR>
 let g:vimgdb_debug_file = ""
 run macros/gdb_mappings.vim 
 
-" auto-detect markdown file type
+" auto-detect file type
 au BufNewFile,BufRead *.md set filetype=markdown
+au BufNewFile,BufRead *.pl set filetype=perl
+
+" AutoComplPop_Behavior
+let g:AutoComplPop_Behavior = { 
+            \ 'c': [ {'command' : "\<C-x>\<C-o>",
+            \       'pattern' : ".",
+            \       'repeat' : 0}
+            \      ]  
+            \}
+let g:AutoComplPop_CompleteoptPreview = 1
+
+""""""""""""""""""""""""""""""
+" tagbar setting
+""""""""""""""""""""""""""""""
+map <F3> :TagbarToggle<CR>

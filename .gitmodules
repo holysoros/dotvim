@@ -58,3 +58,11 @@
 	path = bundle/align
 	url = https://github.com/tsaleh/vim-align.git
     ignore = dirty
+[submodule "bundle/AutoComplPop"]
+	path = bundle/AutoComplPop
+	url = https://github.com/vim-scripts/AutoComplPop.git
+    ignore = dirty
+[submodule "bundle/tagbar"]
+	path = bundle/tagbar
+	url = https://github.com/majutsushi/tagbar.git
+    ignore = dirty
