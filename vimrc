@@ -151,6 +151,8 @@ map <silent> <C-F2> :if &guioptions =~# 'T' <Bar>
 \else <Bar>
 \set guioptions+=T <Bar>
 \set guioptions+=m <Bar>
+map j gj
+map k gk
 
 " configure for taglist plugin
 "map <F3> :silent! Tlist<CR>

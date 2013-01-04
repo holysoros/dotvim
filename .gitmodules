@@ -66,3 +66,6 @@
 	path = bundle/tagbar
 	url = https://github.com/majutsushi/tagbar.git
     ignore = dirty
+[submodule "bundle/python"]
+	path = bundle/python
+	url = https://github.com/vim-scripts/python.vim--Vasiliev.git
