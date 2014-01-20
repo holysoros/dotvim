@@ -289,9 +289,6 @@ nn      <leader>q :QFix<cr>
 map <C-F1> :call ToggleSketch()<CR>
 
 
-"Markdown to HTML  
-nmap <leader>md :%!/usr/local/bin/Markdown.pl --html4tags <cr>
-
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " cscope setting
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
