@@ -171,7 +171,7 @@ let Tlist_Inc_Winwidth=0
 """"""""""""""""""""""""""""""
 nmap <silent> <leader>fe :NERDTreeToggle<cr>
 let NERDChristmasTree=0
-let NERDTreeIgnore=['\.swp$', '\~$']	" ignore .swp and ~ files
+let NERDTreeIgnore=['\.swp$', '\~$', '\.pyc$']	" ignore .swp and ~ files
 let NERDTreeHijackNetrw=1
 
 """"""""""""""""""""""""""""""
@@ -259,7 +259,7 @@ let g:template_load=1
 let g:template_confirm=0
 let g:template_tags_replacing=1
 " set template files path, save time to search
-let g:template_path="/home/soros/.vim/bundle/template_loader/templates"
+let g:template_path="/home/eazabde/.vim/bundle/template_loader/templates"
 " set pre-defined tags
 let g:T_AUTHOR = "LiJunjie"
 let g:T_AUTHOR_EMAIL="holysoros@gmail.com"
