@@ -171,7 +171,7 @@ let Tlist_Inc_Winwidth=0
 """"""""""""""""""""""""""""""
 nmap <silent> <leader>fe :NERDTreeToggle<cr>
 let NERDChristmasTree=0
-let NERDTreeIgnore=['\.swp$', '\~$']	" ignore .swp and ~ files
+let NERDTreeIgnore=['\.swp$', '\~$', '\.pyc$']	" ignore .swp and ~ files
 let NERDTreeHijackNetrw=1
 
 """"""""""""""""""""""""""""""
